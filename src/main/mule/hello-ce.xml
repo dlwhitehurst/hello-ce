@@ -17,6 +17,6 @@
 	<flow name="hello-ce-flow">
 		<http:listener doc:name="Listener" 
 			config-ref="HTTP_Listener_config" path="hello"/>
-		<set-payload value="#['Hello from Mule CE 4.4.0']" doc:name="Set Payload" mimeType="text/plain"/>
+		<set-payload value="#[${file::modules/time.dwl}]" />
 	</flow>
 </mule>
